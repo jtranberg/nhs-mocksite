@@ -15,7 +15,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow">Adoption • Support • Community</p>
 
-          <h1>Helping animals find safety, care, and forever homes.</h1>
+          <h1>Helping animals find safety, care, and forever homes since 1966.</h1>
 
           <p className="hero-text">
             A warm, accessible public platform designed to increase adoptions,
