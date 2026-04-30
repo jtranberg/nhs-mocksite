@@ -8,6 +8,7 @@ import Journeys from "./pages/Journeys";
 import Volunteer from "./pages/Volunteer";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Documents from "./pages/Documents";
 
 import "./styles/global.css";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/documents" element={<Documents />} />
       </Routes>
     </BrowserRouter>
   );
