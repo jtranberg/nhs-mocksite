@@ -5,25 +5,25 @@ const documents = [
   {
     title: "Adoption Application",
     description: "Download the application form for adopting an animal.",
-    file: "#",
+    file: "/documents/adoption-application.pdf",
     tag: "Adoption",
   },
   {
     title: "Foster Application",
     description: "Apply to provide temporary care for animals in need.",
-    file: "#",
+    file: "/documents/foster-application.pdf",
     tag: "Foster",
   },
   {
     title: "Volunteer Form",
     description: "Get started as a volunteer with NHS.",
-    file: "#",
+    file: "/documents/volunteer-form.pdf",
     tag: "Volunteer",
   },
   {
     title: "Pet Care Guide",
     description: "Helpful information for new adopters and pet owners.",
-    file: "#",
+    file: "/documents/pet-care-guide.pdf",
     tag: "Care Guide",
   },
 ];
@@ -47,7 +47,12 @@ export default function Documents() {
             <h3>{doc.title}</h3>
             <p>{doc.description}</p>
 
-            <a href={doc.file} className="button button-primary" download>
+            <a
+              href={doc.file}
+              className="button button-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download
             </a>
           </article>
