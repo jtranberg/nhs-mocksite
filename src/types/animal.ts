@@ -6,4 +6,8 @@ export interface Animal {
   status: "Available" | "Recovery" | "Foster";
   description: string;
   image: string;
+
+  // NEW
+  story: string;
+  personality: string[];
 }

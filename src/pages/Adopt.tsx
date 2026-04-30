@@ -1,12 +1,23 @@
+import { useState } from "react";
 import PageLayout from "../components/PageLayout";
 import AnimalCard from "../components/AnimalCard";
-import { animals } from "../components/data/animals";
+import { animals } from "../data/animals";
 
 import "../styles/adopt.css";
 
+type FilterType = "All" | "Dog" | "Cat" | "Other";
+
 export default function Adopt() {
+  const [filter, setFilter] = useState<FilterType>("All");
+
+  const filteredAnimals =
+    filter === "All"
+      ? animals
+      : animals.filter((animal) => animal.type === filter);
+
   return (
     <PageLayout>
+      {/* HERO */}
       <section className="adopt-hero">
         <p className="eyebrow">Adopt</p>
         <h1>Find your next family member.</h1>
@@ -16,15 +27,22 @@ export default function Adopt() {
         </p>
       </section>
 
+      {/* FILTER BAR */}
       <section className="adopt-toolbar">
-        <button>All</button>
-        <button>Dogs</button>
-        <button>Cats</button>
-        <button>Other</button>
+        {["All", "Dog", "Cat", "Other"].map((type) => (
+          <button
+            key={type}
+            className={filter === type ? "active" : ""}
+            onClick={() => setFilter(type as FilterType)}
+          >
+            {type}
+          </button>
+        ))}
       </section>
 
+      {/* GRID */}
       <section className="adopt-grid">
-        {animals.map((animal) => (
+        {filteredAnimals.map((animal) => (
           <AnimalCard key={animal.id} {...animal} />
         ))}
       </section>

@@ -4,41 +4,9 @@ import JourneyPreview from "../components/JourneyPreview";
 import QuickActions from "../components/QuickActions";
 import ImpactSection from "../components/ImpactSection";
 import AdoptionCTA from "../components/AdoptionCTA";
+import { animals } from "../data/animals";
 
 import "../styles/home.css";
-
-const featuredAnimals = [
-  {
-    id: "milo",
-    name: "Milo",
-    type: "Dog",
-    age: "2 years",
-    status: "Ready for Adoption",
-    description: "A playful companion learning confidence and trust every day.",
-    image:
-      "https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    id: "luna",
-    name: "Luna",
-    type: "Cat",
-    age: "1 year",
-    status: "In Recovery",
-    description: "Gentle, curious, and slowly showing her bright personality.",
-    image:
-      "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    id: "rosie",
-    name: "Rosie",
-    type: "Rabbit",
-    age: "8 months",
-    status: "Foster Needed",
-    description: "Sweet, quiet, and looking for a calm temporary home.",
-    image:
-      "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=80",
-  },
-];
 
 export default function Home() {
   return (
@@ -89,7 +57,7 @@ export default function Home() {
         </div>
 
         <div className="animal-grid">
-          {featuredAnimals.map((animal) => (
+          {animals.slice(0, 3).map((animal) => (
             <AnimalCard key={animal.id} {...animal} />
           ))}
         </div>

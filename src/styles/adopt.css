@@ -20,15 +20,6 @@
   font-size: 1.08rem;
 }
 
-.adopt-toolbar {
-  width: min(1180px, calc(100% - 32px));
-  margin: 42px auto 0;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
 .adopt-toolbar button {
   border: 1px solid #cfe0d6;
   background: #ffffff;
@@ -37,6 +28,13 @@
   padding: 11px 18px;
   font-weight: 800;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.adopt-toolbar button.active {
+  background: #1f6f4a;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(31, 111, 74, 0.2);
 }
 
 .adopt-grid {

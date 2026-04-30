@@ -1,0 +1,103 @@
+/* HERO */
+.donate-hero {
+  width: min(980px, calc(100% - 32px));
+  margin: 70px auto 0;
+  text-align: center;
+}
+
+.donate-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: -0.06em;
+}
+
+.donate-hero p:not(.eyebrow) {
+  margin-top: 24px;
+  color: #5c7067;
+  line-height: 1.7;
+}
+
+/* IMPACT GRID */
+.donate-impact {
+  width: min(1180px, calc(100% - 32px));
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.impact-card {
+  background: #ffffff;
+  border: 1px solid #e2ede6;
+  border-radius: 28px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(36, 53, 47, 0.08);
+}
+
+.impact-card h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1f6f4a;
+}
+
+.impact-card p {
+  margin-top: 10px;
+  color: #5c7067;
+}
+
+/* CTA */
+.donate-cta {
+  width: min(980px, calc(100% - 32px));
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.donate-cta h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+
+.donate-cta p {
+  margin-top: 16px;
+  color: #5c7067;
+  line-height: 1.7;
+}
+
+.donate-cta .button {
+  margin-top: 28px;
+}
+
+/* TRUST */
+.donate-trust {
+  width: min(980px, calc(100% - 32px));
+  margin: 80px auto 100px;
+  text-align: center;
+}
+
+.donate-trust h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+
+.donate-trust p:not(.eyebrow) {
+  margin-top: 16px;
+  color: #5c7067;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .donate-impact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .donate-impact {
+    grid-template-columns: 1fr;
+  }
+}
